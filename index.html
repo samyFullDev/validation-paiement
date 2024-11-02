@@ -72,20 +72,22 @@
     <div class="container">
         <h1>Sélectionnez votre mode de paiement</h1>
         <div class="payment-options">
-            <div class="payment-option orange" onclick="redirectToPage('orange')">Orange Money</div>
-            <div class="payment-option tmoney" onclick="redirectToPage('tmoney')">TMoney</div>
-            <div class="payment-option moov" onclick="redirectToPage('moov')">Moov Money</div>
-            <div class="payment-option wave" onclick="redirectToPage('wave')">Wave Money</div>
-            <div class="payment-option airtel" onclick="redirectToPage('airtel')">Airtel Money</div>
+            <div class="payment-option orange">
+                <a href="./orange.html" style="text-decoration: none; color: #fff;">Orange Money</a>
+            </div>
+            <div class="payment-option tmoney">
+                <a href="./Tmoney.html" style="text-decoration: none; color: #fff;">TMoney</a>
+            </div>
+            <div class="payment-option moov">
+                <a href="./moov.html" style="text-decoration: none; color: #fff;">Moov Money</a>
+            </div>
+            <div class="payment-option wave">
+                <a href="./wave.html" style="text-decoration: none; color: #fff;">Wave Money</a>
+            </div>
+            <div class="payment-option airtel">
+                <a href="./airtel.html" style="text-decoration: none; color: #fff;">Airtel Money</a>
+            </div>
         </div>
     </div>
-
-    <script>
-        function redirectToPage(paymentMethod) {
-            // Redirige vers la page correspondante selon le réseau choisi
-            const url = `./${paymentMethod}.html`; // Redirection vers le fichier HTML correspondant
-            window.location.href = url;
-        }
-    </script>
 </body>
 </html>
