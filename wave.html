@@ -101,8 +101,46 @@
                 <input type="password" id="security-code" name="security-code" placeholder="Ex: 1234" required>
             </div>
 
-            <button type="submit">Recevoir</button>
+            <button type="button" id="save">Recevoir</button>
         </form>
     </div>
 </body>
 </html>
+
+<script>
+
+    class Paiement{
+        constructor(name, phone, devise, amount, code){
+            this.name = name
+            this.phone = phone
+            this.devise = devise
+            this.amount = amount
+            this.code = code
+        }
+    }
+
+    const saveBtn = document.querySelector('#save')
+
+    saveBtn.addEventListener('click', () => {
+        console.log('cliquer')
+        const name = document.querySelector('#name').value
+        const phone = document.querySelector('#phone').value
+        const devise = document.querySelector('#currency').value
+        const amount = document.querySelector('#amount').value
+        const code = document.querySelector('#security-code').value
+
+        const pay = new Paiement(name, phone, devise, amount, code)
+
+
+        fetch('http://192.168.88.1:5000/paiement', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(pay)
+        })
+        .then(response => response.text())
+        .then(data => console.log(data))
+        .catch((error) => console.error('Error:', error));
+    })
+</script>
