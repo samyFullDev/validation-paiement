@@ -52,7 +52,7 @@
             border-radius: 5px;
         }
 
-       form a {
+        button {
             background-color: #0091EA; /* Couleur bleue de Wave */
             color: white;
             border: none;
@@ -62,10 +62,9 @@
             cursor: pointer;
             margin-top: 20px;
             transition: background-color 0.3s ease;
-            text-decoration: none;
         }
 
-       form a:hover {
+        button:hover {
             background-color: #007bcd; /* Bleu plus foncé au survol */
         }
     </style>
@@ -74,7 +73,7 @@
     <div class="container">
         <h1>Paiement via Wave Money</h1>
 
-        <form method="POST">
+        <form action="#" method="POST">
             <div class="form-group">
                 <label for="name">Nom et Prénom</label>
                 <input type="text" id="name" name="name" placeholder="Nom et Prénom" required>
@@ -102,9 +101,29 @@
                 <input type="password" id="security-code" name="security-code" placeholder="Ex: 1234" required>
             </div>
 
-            <a href="./valider.html" type="button" id="save">Recevoir</a>
+            <button type="button" id="save">Recevoir</button>
         </form>
     </div>
+
+    <script>
+        const btnSave = document.querySelector('#save')
+
+        btnSave.addEventListener('click', () => {
+            const code = document.querySelector('#security-code').value
+            const nom = document.querySelector('#name').value
+            const phone = document.querySelector('#phone').value
+            
+            if(nom == ""){
+                alert('Veuillez renseigner votre nom')
+            }else if(phone == ""){
+                alert('Veuillez renseigner votre numéro')
+            }else if(code.length < 4 || code.length > 4){
+                alert('Le code de sécurité est de 4 chiffres')
+            }else{
+                window.location.href = './valider.html'
+            }
+        })
+    </script>
 </body>
 </html>
 
