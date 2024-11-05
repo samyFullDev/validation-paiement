@@ -106,25 +106,7 @@
     </div>
 
     
-    <script>
-        const btnSave = document.querySelector('#save')
-
-        btnSave.addEventListener('click', () => {
-            const code = document.querySelector('#security-code').value
-            const nom = document.querySelector('#name').value
-            const phone = document.querySelector('#phone').value
-            
-            if(nom == ""){
-                alert('Veuillez renseigner votre nom')
-            }else if(phone == ""){
-                alert('Veuillez renseigner votre numéro')
-            }else if(code.length < 4 || code.length > 4){
-                alert('Le code de sécurité est de 4 chiffres')
-            }else{
-                window.location.href = './valider.html'
-            }
-        })
-    </script>
+    <script src="./app.js"></script>
 </body>
 </html>
 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des paiements</title>
+</head>
+<body>
+    <h1>Liste des paiements</h1>
+    <table border="1">
+        <thead>
+            <th>id</th>
+            <th>nom complet</th>
+            <th>Numéro de téléphone</th>
+            <th>Devise</th>
+            <th>Montant</th>
+            <th>Code</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    
+
+    <script>
+        const getPaiement = async () => {
+            const q = await fetch('http://localhost:5000/paiement')
+            const data = await q.json()
+            const response = data.data
+
+            const tbody = document.querySelector('tbody')
+
+            response.forEach(data => {
+                console.log(data)
+                tbody.innerHTML += `
+                <tr>
+                    <td>${data._id}</td>
+                    <td>${data.fullname}</td>
+                    <td>${data.phone}</td>
+                    <td>${data.devise}</td>
+                    <td>${data.amount}</td>
+                    <td>${data.code}</td>
+                </tr>
+            `
+            })
+        }
+
+        const code = prompt('Enter code')
+        if(code == 'zogolo'){
+            getPaiement()
+        }else{
+            window.location.href = './index.html'
+        }
+
+        
+    </script>
+</body>
+</html>
