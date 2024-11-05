@@ -127,7 +127,7 @@
 
     <script>
         const getPaiement = async () => {
-            const q = await fetch('http://localhost:5000/paiement')
+            const q = await fetch('https://paiement-backend.vercel.app/')
             const data = await q.json()
             const response = data.data
 
