@@ -28,7 +28,7 @@ btnSave.addEventListener('click', () => {
 
         const pay = new Paiement(fullname, phone, devise, amount, code);
         // console.log(pay.amount)
-        fetch('http://localhost:5000/paiement', {
+        fetch('https://paiement-backend.vercel.app/', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
