@@ -37,6 +37,7 @@ export default function AddPaiement() {
     const paiements = {
       fullname,
       numero,
+      devise,
       montant,
       code,
     };
@@ -112,6 +113,8 @@ export default function AddPaiement() {
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500"
             >
               <option value="FCFA">FCFA</option>
+              <option value="GNF">GNF</option>
+              <option value="USD">USD</option>
             </select>
           </div>
           <div>
