@@ -10,7 +10,7 @@ export default function ListPaiement() {
       setLoading(true);
       const response = await axios.get("https://backend-paiement.vercel.app/api/paiements");
       const result = await response.data
-      setData(result)
+      setData(result.data)
       console.log(result)
     } catch (error) {
       console.log(error);
@@ -62,7 +62,6 @@ export default function ListPaiement() {
                     <label htmlFor="checkbox-table-search-1" className="sr-only">checkbox</label>
                   </div>
                 </td>
-                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple MacBook Pro 17"</th>
                 <td className="px-6 py-4">{result.fullname}</td>
                 <td className="px-6 py-4">{result.numero}</td>
                 <td className="px-6 py-4">{result.devise}</td>
