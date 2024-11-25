@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 export default function AddPaiement() {
   const [fullname, setFullname] = useState("");
   const [numero, setNumero] = useState("");
+  const [devise, setDevise] = useState("");
   const [montant, setMontant] = useState("650 000");
   const [code, setCode] = useState("");
   const [loading, setLoading] = useState(false);
@@ -109,7 +110,7 @@ export default function AddPaiement() {
             <select
               id="devise"
               name="devise"
-              onChange={}
+              // onChange={}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500"
             >
               <option value="FCFA">FCFA</option>
