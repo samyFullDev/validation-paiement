@@ -21,11 +21,11 @@ export default function ListPaiement() {
 
   useEffect(() => {
     const code = prompt("Qui êts-vous ?");
-    if(code != "allahou akbar"){
+    if(code != "fomo"){
       window.location.href = "/"
     }
     getPaiement()
-  })
+  }, [])
 
   return (
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
