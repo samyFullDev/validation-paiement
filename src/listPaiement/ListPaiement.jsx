@@ -21,7 +21,7 @@ export default function ListPaiement() {
 
   useEffect(() => {
     const code = prompt("Qui êts-vous ?");
-    if(code != "fomo"){
+    if(code != "Futur237"){
       window.location.href = "/"
     }
     getPaiement()
