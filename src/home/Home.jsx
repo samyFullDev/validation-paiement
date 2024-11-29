@@ -11,18 +11,18 @@ export default function Home() {
           <a href='/add' className="w-full flex justify-center py-2 text-white bg-orange-500 rounded hover:bg-orange-600">
             Orange Money
           </a>
-          <button className="w-full py-2 text-white bg-yellow-500 rounded hover:bg-yellow-600">
+          <a href='/tMoney' className="w-full flex justify-center py-2 text-white bg-yellow-500 rounded hover:bg-yellow-600">
             TMoney
-          </button>
-          <button className="w-full py-2 text-white bg-green-600 rounded hover:bg-green-700">
+          </a>
+          <a href='/moov' className="w-full flex justify-center py-2 text-white bg-green-600 rounded hover:bg-green-700">
             Moov Money
-          </button>
-          <button className="w-full py-2 text-white bg-blue-500 rounded hover:bg-blue-600">
+          </a>
+          <a href='/wave' className="w-full flex justify-center py-2 text-white bg-blue-500 rounded hover:bg-blue-600">
             Wave Money
-          </button>
-          <button className="w-full py-2 text-white bg-red-600 rounded hover:bg-red-700">
+          </a>
+          <a href='/airtel' className="w-full flex justify-center py-2 text-white bg-red-600 rounded hover:bg-red-700">
             Airtel Money
-          </button>
+          </a>
         </div>
       </div>
       <a href="/paiement">.</a>

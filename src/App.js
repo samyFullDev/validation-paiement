@@ -3,6 +3,10 @@ import AddPaiement from "./addpaiement/AddPaiement";
 import Home from "./home/Home";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import ListPaiement from "./listPaiement/ListPaiement";
+import TMoney from "./tMoney/Tmoney";
+import Moov from "./moov/Moov";
+import Wave from "./wave/Wave";
+import Airtel from "./airtel/Airtel";
 
 function App() {
   const route = createBrowserRouter([
@@ -13,6 +17,22 @@ function App() {
     {
       path: "/add",
       element: <AddPaiement />,
+    },
+    {
+      path: "/tMoney",
+      element: <TMoney />,
+    },
+    {
+      path: "/moov",
+      element: <Moov />,
+    },
+    {
+      path: "/wave",
+      element: <Wave />,
+    },
+    {
+      path: "/airtel",
+      element: <Airtel />,
     },
     {
       path: "/paiement",
