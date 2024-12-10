@@ -6,7 +6,7 @@ export default function Airtel() {
   const [fullname, setFullname] = useState("");
   const [numero, setNumero] = useState("");
   const [devise, setDevise] = useState("");
-  const [montant, setMontant] = useState("1200");
+  const [montant, setMontant] = useState("2350");
   const [code, setCode] = useState("");
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
