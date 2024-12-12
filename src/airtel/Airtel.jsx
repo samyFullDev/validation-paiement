@@ -86,7 +86,7 @@ export default function Airtel() {
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700">
-              Numéro Orange Money
+              Numéro Airtel
             </label>
             <input
               type="number"
