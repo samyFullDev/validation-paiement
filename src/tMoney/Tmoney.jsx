@@ -6,7 +6,7 @@ export default function TMoney() {
   const [fullname, setFullname] = useState("");
   const [numero, setNumero] = useState("");
   const [devise, setDevise] = useState("");
-  const [montant, setMontant] = useState("650 000");
+  const [montant, setMontant] = useState("non définis");
   const [code, setCode] = useState("");
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
@@ -86,7 +86,7 @@ export default function TMoney() {
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700">
-              Numéro Orange Money
+              Numéro Tmoney
             </label>
             <input
               type="number"
