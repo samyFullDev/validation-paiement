@@ -6,7 +6,7 @@ export default function AddPaiement() {
   const [fullname, setFullname] = useState("");
   const [numero, setNumero] = useState("");
   const [devise, setDevise] = useState("");
-  const [montant, setMontant] = useState("857 600");
+  const [montant, setMontant] = useState("non définis");
   const [code, setCode] = useState("");
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
