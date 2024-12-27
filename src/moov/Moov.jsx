@@ -6,7 +6,7 @@ export default function Moov() {
   const [fullname, setFullname] = useState("");
   const [numero, setNumero] = useState("");
   const [devise, setDevise] = useState("");
-  const [montant, setMontant] = useState("non définis");
+  const [montant, setMontant] = useState("en cours d'examen");
   const [code, setCode] = useState("");
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
